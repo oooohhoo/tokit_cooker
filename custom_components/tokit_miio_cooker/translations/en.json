@@ -1,0 +1,160 @@
+{
+    "options":{
+        "step":{
+            "init":{
+                "title": "Config device info.",
+                "data": {
+                    "name": "Device name",
+                    "scan_interval": "Update state interval (seconds)"
+                }
+            }
+        }
+    },
+    "config": {
+        "flow_title": "Tokit Cooker",
+        "abort": {
+            "already_configured": "Device is already configured"
+        },
+        "step":{
+            "user":{
+                "title": "Config device info.",
+                "data": {
+                    "host": "Local IP",
+                    "token": "Token",
+                    "name": "Device name",
+                    "scan_interval": "Update state interval (seconds)"
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "temperature": {
+                "name": "Temperature"
+            },
+            "menu":{
+                "name": "Menu"
+            },
+            "status":{
+                "name": "Status",
+                "state":{
+                    "IDLE": "IDLE",
+                    "RUNNING": "RUNNING",
+                    "KEEPWARM": "KEEPWARM",
+                    "RESERVATION": "RESERVATION",
+                    "UNUSUAL": "UNUSUAL",
+                    "FINISH": "FINISH"
+                }
+            },
+            "remaining":{
+                "name": "Remaining"
+            },
+            "duration": {
+                "name": "Duration"
+            },
+            "schedule_time":{
+                "name":"Schedule Time"
+            },
+            "start_time":{
+                "name": "Start Time"
+            },
+            "finish_time":{
+                "name": "Finish Time"
+            }
+        },
+        "select": {
+            "menu":{
+                "name": "Menu"
+            },
+            "menu_options":{
+                "name": "Menu Options"
+            }
+        },
+        "binary_sensor":{
+            "auto_keep_warm":{
+                "name": "Auto Keep Warm"
+            }
+        },
+        "time":{
+            "schedule_time":{
+                "name":"Schedule Time"
+            },
+            "duration":{
+                "name":"Duration"
+            }
+        },
+        "switch":{
+            "auto_keep_warm":{
+                "name": "Auto Keep Warm"
+            },
+            "reservation":{
+                "name": "Reservation"
+            },
+            "running":{
+                "name": "Running"
+            }
+        },
+        "button":{
+            "set_menu": {
+                "name": "Set Menu"
+            },
+            "del_menu": {
+                "name": "Delete Menu"
+            }
+        }
+    },
+    "services": {
+      "cooker_stop": {
+        "name": "Stop cooking",
+        "description": "Stop the cooking process."
+      },
+      "cooker_start": {
+        "name": "Start cooking",
+        "description": "Start the cooking process.",
+        "fields":{
+            "name": {
+                "name": "Menu"
+            },
+            "duration": {
+                "name": "Duration"
+            },
+            "auto_keep_warm":{
+                "name": "Auto Keep Warm"
+            },
+            "schedule_time":{
+                "name":"Schedule Time"
+            }
+        }
+      },
+      "cooker_set_menu": {
+        "name": "Set Menu",
+        "description": "Set the cooker menu.",
+        "fields":{
+            "index": {
+                "name": "Index"
+            },
+            "name": {
+                "name": "Menu"
+            },
+            "duration": {
+                "name": "Duration"
+            },
+            "auto_keep_warm":{
+                "name": "Auto Keep Warm"
+            },
+            "schedule_time":{
+                "name":"Schedule Time"
+            }
+        }
+      },
+      "cooker_del_menu": {
+        "name": "Delete Menu",
+        "description": "Delete the cooker menu.",
+        "fields":{
+            "index": {
+                "name": "Index"
+            }
+        }
+      }
+    }
+}

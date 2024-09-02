@@ -1,0 +1,128 @@
+cooker_stop:
+  target:
+    entity:
+      integration: tokit_miio_cooker
+    device:
+      integration: tokit_miio_cooker
+  name: Stop cooking
+  description: Stop the cooking process.
+
+cooker_start:
+  target:
+    entity:
+      integration: tokit_miio_cooker
+    device:
+      integration: tokit_miio_cooker
+  fields:
+    name:
+      required: false
+      # Example value that can be passed for this field
+      example: "精煮饭"
+      # Selector (https://www.home-assistant.io/docs/blueprint/selectors/) to control
+      # the input UI for this field
+      selector:
+        select:
+          options:
+            - "精煮饭"
+            - "快煮饭"
+            - "煮粥"
+            - "保温"
+            - "蒸煮"
+            - "炖汤"
+            - "蛋糕"
+            - "酸奶"
+            - "热饭"
+            - "小米粥"
+            - "八宝粥"
+            - "煲仔饭"
+            - "香甜煮"
+            - "发芽饭"
+    duration:
+      required: false
+      example: 60 # min
+      selector:
+        number:
+          min: 5
+    schedule:
+      required: false
+      example: 480 # 8:00:00
+      selector:
+        number:
+          min: 0
+          max: 1440
+    auto_keep_warm:
+      required: false
+      example: true
+      selector:
+        boolean:
+cooker_set_menu:
+  target:
+    entity:
+      integration: tokit_miio_cooker
+    device:
+      integration: tokit_miio_cooker
+  fields:
+    index:
+      required: true
+      example: 8
+      default: 8
+      selector:
+        number:
+          min: 1
+          max: 8
+    name:
+      required: true
+      # Example value that can be passed for this field
+      example: "精煮饭"
+      # Selector (https://www.home-assistant.io/docs/blueprint/selectors/) to control
+      # the input UI for this field
+      selector:
+        select:
+          options:
+            - "精煮饭"
+            - "快煮饭"
+            - "煮粥"
+            - "保温"
+            - "蒸煮"
+            - "炖汤"
+            - "蛋糕"
+            - "酸奶"
+            - "热饭"
+            - "小米粥"
+            - "八宝粥"
+            - "煲仔饭"
+            - "香甜煮"
+            - "发芽饭"
+    duration:
+      required: false
+      example: 60 # min
+      selector:
+        number:
+          min: 5
+    schedule:
+      required: false
+      example: 480 # 8:00:00
+      selector:
+        number:
+          min: 0
+          max: 1440
+    auto_keep_warm:
+      required: false
+      example: true
+      selector:
+        boolean:
+cooker_del_menu:
+  target:
+    entity:
+      integration: tokit_miio_cooker
+    device:
+      integration: tokit_miio_cooker
+  fields:
+    index:
+      required: true
+      example: 8
+      default: 8
+      selector:
+        number:
+          min: 1
+          max: 8
