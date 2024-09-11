@@ -122,16 +122,16 @@ show_icon: true
 scrolling_effect: true
 styles: |-
   .bubble-button-card-container {
-      background: ${state === 'IDLE' ? '' : state === 'RUNNING'? '#90EE90': state  === "RESERVATION"? '#87CEFA': state === 'KEEPWARM'? '#FFEBCD':'#F08080'} !important;
+      background: ${state === 'idle' ? '' : state === 'running'? '#90EE90': state  === "reservation"? '#87CEFA': state === 'keepwarm'? '#FFEBCD':'#F08080'} !important;
     }
   .bubble-sub-button-6 {
-      display: ${state  === "RESERVATION"? '' : 'none'} !important;
+      display: ${state  === "reservation"? '' : 'none'} !important;
     }
   .bubble-sub-button-5 {
-      display: ${state  !== "RESERVATION" && state !== "IDLE"? '' : 'none'} !important;
+      display: ${state  !== "reservation" && state !== "idle"? '' : 'none'} !important;
     }
   .bubble-sub-button-7 {
-      display: ${state  === "IDLE"? '' : 'none'} !important;
+      display: ${state  === "idle"? '' : 'none'} !important;
     }
 card_layout: large-2-rows
 ```
