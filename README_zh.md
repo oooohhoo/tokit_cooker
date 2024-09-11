@@ -1,50 +1,48 @@
 # TOKIT Smart Rice Cooker for Home Assistant
-English | [简体中文](https://github.com/oooohhoo/tokit_cooker/blob/master/README_zh.md)
 
-This is a custom component for home assistant to integrate the TOKIT Smart Rice Cooker.
+这是一个用于 Home Assistant 的自定义组件，用于集成 TOKIT 智能电饭煲。
 
-Currently supported device: `tokit.cooker.tk4001`
+当前支持的设备：`tokit.cooker.tk4001`
 
-Please follow the instructions on [Retrieving the Access Token](https://www.home-assistant.io/integrations/xiaomi_miio/#retrieving-the-access-token) to get the API token to use.
+请按照 [获取访问令牌的说明](https://www.home-assistant.io/integrations/xiaomi_miio/#retrieving-the-access-token) 来获取 API 令牌以供使用。
 
-Credits: Thanks to [Rytilahti](https://github.com/rytilahti/python-miio) for all the work.
+致谢：感谢 [Rytilahti](https://github.com/rytilahti/python-miio) 的所有贡献。
 
-## Features
-* Cooker Status
-* Start cooking
-* Schedule cooking
-* Stop cooking
-* Set menu
-* Delete menu
+## 功能
+* 电饭煲状态
+* 开始烹饪
+* 预约烹饪
+* 停止烹饪
+* 设置菜单
+* 删除菜单
 
+## 安装
+您可以通过 [HACS](https://hacs.xyz/) 安装此自定义组件。在 HACS 的集成页面搜索 'TOKIT Smart Rice Cooker Integration'。或者，您也可以通过将 custom_component 文件夹复制到 Home Assistant 配置文件夹中进行手动安装。
 
-## Installation
-You can install this custom component via [HACS](https://hacs.xyz/). Search for for 'TOKIT Smart Rice Cooker Integration' at the integration page of HACS. Alternatively, you can install it manually by copying the custom_component folder to your Home Assistant configuration folder.
+## 设置
+### 配置
+[⚙️ 配置](https://my.home-assistant.io/redirect/config) > 设备和服务 > [🧩 集成](https://my.home-assistant.io/redirect/integrations) > [➕ 添加集成](https://my.home-assistant.io/redirect/config_flow_start?domain=tokit_cooker) > 🔍 搜索 `TOKIT Smart Rice Cooker`
 
-## Setup
-### Configuration
-[⚙️ Configuration](https://my.home-assistant.io/redirect/config) > Devices and Services > [🧩 Integrations](https://my.home-assistant.io/redirect/integrations) > [➕ Add Integration](https://my.home-assistant.io/redirect/config_flow_start?domain=tokit_cooker) > 🔍 Search `TOKIT Smart Rice Cooker`
+或点击：[![添加集成](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start?domain=tokit_cooker)
 
-Or click: [![Add Integration](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start?domain=tokit_cooker)
+使用host/token和可选的name/scan_interval添加设备
+配置变量：
+- **host** (*必填*): 电饭煲的 IP 地址。
+- **token** (*必填*): 电饭煲的 API 令牌。
+- **name** (*可选*): 电饭煲的名称。
+- **scan_interval** (*可选*): 扫描电饭煲的间隔（以秒为单位）。
 
-Add device using host/token and optional name/scan_interval
-Configuration variables:
-- **host** (*Required*): The IP of your cooker.
-- **token** (*Required*): The API token of your cooker.
-- **name** (*Optional*): The name of your cooker.
-- **model** (*Optional*): The insterval in seconds to scan your cooker
+![configure](images/configure_zh.png)
 
-![configure](images/configure.png)
+> 选择位置
 
-> Select location
+![configure_location](images/configure_location_zh.png)
 
-![configure_location](images/configure_location.png)
+### 仪表板
+安装 [Bubble Cards](https://github.com/Clooos/Bubble-Card)
 
-### Dashboard
-Install [Bubble Cards](https://github.com/Clooos/Bubble-Card)
-
-#### Bubble Card 
-![bubble_card](images/bubble_card.png)
+#### Bubble Card
+![bubble_card](images/bubble_card_zh.png)
 ```yaml
 type: custom:bubble-card
 card_type: button
@@ -131,7 +129,7 @@ styles: |-
 card_layout: large-2-rows
 ```
 #### Popup Card
-![run](images/run.png)
+![run](images/run_zh.png)
 ```yaml
 type: vertical-stack
 cards:
@@ -145,7 +143,7 @@ cards:
       - switch.tokit_cooker_tk4001_auto_keep_warm
       - switch.tokit_cooker_tk4001_running
 ```
-![schedule](images/schedule.png)
+![schedule](images/schedule_zh.png)
 ```yaml
 type: vertical-stack
 cards:
@@ -161,7 +159,7 @@ cards:
       - switch.tokit_cooker_tk4001_reservation
 
 ```
-![menu](images/menu.png)
+![menu](images/menu_zh.png)
 ```yaml
 type: vertical-stack
 cards:

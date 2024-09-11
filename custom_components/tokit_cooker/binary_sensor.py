@@ -52,4 +52,8 @@ class AutoKeepWarmSensor(CoordinatorEntity, BinarySensorEntity):
     def _handle_coordinator_update(self) -> None:
         """Handle updated data from the coordinator."""
         self._attr_is_on = getattr(self.coordinator.data, self._attr)
+        if self._attr_is_on:
+            self._attr_icon = "mdi:fire"
+        else:
+            self._attr_icon = "mdi:fire-off"
         self.async_write_ha_state()

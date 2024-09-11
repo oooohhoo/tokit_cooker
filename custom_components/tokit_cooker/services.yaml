@@ -1,18 +1,18 @@
 cooker_stop:
   target:
     entity:
-      integration: tokit_miio_cooker
+      integration: tokit_cooker
     device:
-      integration: tokit_miio_cooker
+      integration: tokit_cooker
   name: Stop cooking
   description: Stop the cooking process.
 
 cooker_start:
   target:
     entity:
-      integration: tokit_miio_cooker
+      integration: tokit_cooker
     device:
-      integration: tokit_miio_cooker
+      integration: tokit_cooker
   fields:
     name:
       required: false
@@ -58,9 +58,9 @@ cooker_start:
 cooker_set_menu:
   target:
     entity:
-      integration: tokit_miio_cooker
+      integration: tokit_cooker
     device:
-      integration: tokit_miio_cooker
+      integration: tokit_cooker
   fields:
     index:
       required: true
@@ -114,9 +114,9 @@ cooker_set_menu:
 cooker_del_menu:
   target:
     entity:
-      integration: tokit_miio_cooker
+      integration: tokit_cooker
     device:
-      integration: tokit_miio_cooker
+      integration: tokit_cooker
   fields:
     index:
       required: true
