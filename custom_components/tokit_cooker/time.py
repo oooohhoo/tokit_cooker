@@ -4,7 +4,7 @@ from homeassistant.components.time import ENTITY_ID_FORMAT
 from homeassistant.core import HomeAssistant
 from homeassistant.const import CONF_NAME
 
-from custom_components.tokit_miio_cooker.utils import get_device_info, get_entity_id, get_unique_id
+from .utils import get_device_info, get_entity_id, get_unique_id
 from .const import DOMAIN, DURATION, SCHEDULE_TIME
 from miio.deviceinfo import DeviceInfo
 from homeassistant.config_entries import ConfigEntry

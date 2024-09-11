@@ -1,7 +1,7 @@
 from datetime import timedelta
 from miio.integrations.chunmi.cooker_tokit.cooker_tokit import MODEL_TK4001
 
-DOMAIN = "tokit_miio_cooker"
+DOMAIN = "tokit_cooker"
 DEFAULT_NAME = "TOKIT Miio Cooker"
 SCAN_INTERVAL = timedelta(seconds=30)
 

@@ -4,7 +4,6 @@ from homeassistant import core
 from homeassistant.const import Platform
 from homeassistant.const import CONF_HOST, CONF_SCAN_INTERVAL, CONF_TOKEN, CONF_MODEL, CONF_NAME
 from .const import COOKER_DEL_MENU, COOKER_SET_MENU, COOKER_START, COOKER_STOP, DOMAIN, SUPPORTED_MODELS
-from custom_components.tokit_miio_cooker.const import DOMAIN
 from homeassistant.helpers import device_registry, storage
 from homeassistant import config_entries
 from miio import TokitCooker, DeviceException

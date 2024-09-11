@@ -1,5 +1,3 @@
-import slugify
-
 from .const import DOMAIN
 
 def get_device_info(device_name, device_info):

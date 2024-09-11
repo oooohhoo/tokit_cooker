@@ -7,7 +7,7 @@ from homeassistant.const import CONF_NAME
 from datetime import time
 from homeassistant.core import callback
 
-from custom_components.tokit_miio_cooker.utils import get_device_info, get_entity_id, get_unique_id
+from .utils import get_device_info, get_entity_id, get_unique_id
 from .const import DOMAIN, DURATION, MENU, MENU_OPTIONS
 from miio.integrations.chunmi.cooker_tokit.cooker_tokit import CookerProfile, COOK_MODE_NAME_MAPPING, COOK_MODE_DETAIL_MAPPING
 from miio.deviceinfo import DeviceInfo

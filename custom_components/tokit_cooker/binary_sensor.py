@@ -3,7 +3,7 @@ from homeassistant.components.binary_sensor import ENTITY_ID_FORMAT
 from homeassistant.core import HomeAssistant
 from homeassistant.const import CONF_NAME
 
-from custom_components.tokit_miio_cooker.utils import get_device_info, get_entity_id, get_unique_id
+from .utils import get_device_info, get_entity_id, get_unique_id
 from .const import AUTO_KEEP_WARM, DOMAIN
 from homeassistant.core import callback
 from miio.deviceinfo import DeviceInfo

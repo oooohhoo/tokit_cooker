@@ -20,3 +20,4 @@ Credits: Thanks to [Rytilahti](https://github.com/rytilahti/python-miio) for all
 You can install this custom component via [HACS](https://hacs.xyz/). Search for for 'TOKIT Smart Rice Cooker Integration' at the integration page of HACS. Alternatively, you can install it manually by copying the custom_component folder to your Home Assistant configuration folder.
 
 ## Setup
+
