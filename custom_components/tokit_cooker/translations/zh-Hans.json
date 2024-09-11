@@ -41,7 +41,7 @@
                     "idle": "空闲",
                     "running": "运行",
                     "keepwarm": "保温",
-                    "RESERVATION": "预约",
+                    "reservation": "预约",
                     "unusual": "异常",
                     "finish": "完成"
                 }
