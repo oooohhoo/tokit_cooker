@@ -13,8 +13,11 @@ cooker_start:
       integration: tokit_cooker
     device:
       integration: tokit_cooker
+  name: Start cooking
+  description: Start the cooking process.
   fields:
     name:
+      name: Menu
       required: false
       # Example value that can be passed for this field
       example: "精煮饭"
@@ -38,6 +41,7 @@ cooker_start:
             - "香甜煮"
             - "发芽饭"
     duration:
+      name: Duration
       required: false
       example: 60 # min
       selector:
@@ -45,6 +49,7 @@ cooker_start:
           min: 5
           max: 1440
     schedule:
+      name: Schedule Time
       required: false
       example: 480 # 8:00:00
       selector:
@@ -52,6 +57,7 @@ cooker_start:
           min: 0
           max: 1440
     auto_keep_warm:
+      name: Auto Keep Warm
       required: false
       example: true
       selector:
@@ -62,8 +68,11 @@ cooker_set_menu:
       integration: tokit_cooker
     device:
       integration: tokit_cooker
+  name: Set Menu
+  description: Set the cooker menu.
   fields:
     index:
+      name: Index
       required: true
       example: 8
       default: 8
@@ -72,6 +81,7 @@ cooker_set_menu:
           min: 1
           max: 8
     name:
+      name: Menu
       required: true
       # Example value that can be passed for this field
       example: "精煮饭"
@@ -95,6 +105,7 @@ cooker_set_menu:
             - "香甜煮"
             - "发芽饭"
     duration:
+      name: Duration
       required: false
       example: 60 # min
       selector:
@@ -102,6 +113,7 @@ cooker_set_menu:
           min: 5
           max: 1440
     schedule:
+      name: Schedule Time
       required: false
       example: 480 # 8:00:00
       selector:
@@ -109,6 +121,7 @@ cooker_set_menu:
           min: 0
           max: 1440
     auto_keep_warm:
+      name: Auto Keep Warm
       required: false
       example: true
       selector:
@@ -119,8 +132,11 @@ cooker_del_menu:
       integration: tokit_cooker
     device:
       integration: tokit_cooker
+  name: Delete Menu
+  description: Delete the cooker menu.
   fields:
     index:
+      name: Index
       required: true
       example: 8
       default: 8
