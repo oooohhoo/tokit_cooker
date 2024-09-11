@@ -38,12 +38,12 @@
             "status":{
                 "name": "Status",
                 "state":{
-                    "IDLE": "IDLE",
-                    "RUNNING": "RUNNING",
-                    "KEEPWARM": "KEEPWARM",
-                    "RESERVATION": "RESERVATION",
-                    "UNUSUAL": "UNUSUAL",
-                    "FINISH": "FINISH"
+                    "idle": "IDLE",
+                    "running": "RUNNING",
+                    "keepwarm": "KEEPWARM",
+                    "reservation": "RESERVATION",
+                    "unusual": "UNUSUAL",
+                    "finish": "FINISH"
                 }
             },
             "remaining":{

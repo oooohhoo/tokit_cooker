@@ -15,7 +15,7 @@ import logging
 _LOGGER = logging.getLogger(__name__)
 
 SENSOR_TYPES = [
-    (SensorDeviceClass.ENUM, None, STATUS, None, "mdi:eye", None),
+    (SensorDeviceClass.ENUM, None, STATUS, None, "mdi:eye", lambda s:s.lower()),
     (SensorDeviceClass.ENUM, None, MENU, None, "mdi:menu", None),
     (SensorDeviceClass.TEMPERATURE, SensorStateClass.MEASUREMENT, TEMPERATURE, "°C", "mdi:temperature-celsius", None),
     (SensorDeviceClass.DURATION, None, REMAINING, "s", "mdi:timer", lambda t: int(t.total_seconds())),

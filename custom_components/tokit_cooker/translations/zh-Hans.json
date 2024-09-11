@@ -38,12 +38,12 @@
             "status":{
                 "name": "状态",
                 "state":{
-                    "IDLE": "空闲",
-                    "RUNNING": "运行",
-                    "KEEPWARM": "保温",
+                    "idle": "空闲",
+                    "running": "运行",
+                    "keepwarm": "保温",
                     "RESERVATION": "预约",
-                    "UNUSUAL": "异常",
-                    "FINISH": "完成"
+                    "unusual": "异常",
+                    "finish": "完成"
                 }
             },
             "remaining":{
