@@ -48,7 +48,7 @@ cooker_start:
         number:
           min: 5
           max: 1440
-    schedule:
+    schedule_time:
       name: Schedule Time
       required: false
       example: 480 # 8:00:00
@@ -112,7 +112,7 @@ cooker_set_menu:
         number:
           min: 5
           max: 1440
-    schedule:
+    schedule_time:
       name: Schedule Time
       required: false
       example: 480 # 8:00:00
