@@ -32,17 +32,21 @@
 - **name** (*可选*): 电饭煲的名称。
 - **scan_interval** (*可选*): 扫描电饭煲的间隔（以秒为单位）。
 
-![configure](images/configure_zh.png)
+<!-- ![configure](images/configure_zh.png) -->
+<img src="images/configure_zh.png" alt="configure" width="200"/>
 
 > 选择位置
 
-![configure_location](images/configure_location_zh.png)
+<!-- ![configure_location](images/configure_location_zh.png) -->
+<img src="images/configure_location_zh.png" alt="configure_location" width="200"/>
 
 ### 仪表板
 安装 [Bubble Cards](https://github.com/Clooos/Bubble-Card)
 
 #### Bubble Card
-![bubble_card](images/bubble_card_zh.png)
+<!-- ![bubble_card](images/bubble_card_zh.png) -->
+<img src="images/bubble_card_zh.png" alt="bubble_card_zh" width="400"/>
+
 ```yaml
 type: custom:bubble-card
 card_type: button
@@ -129,7 +133,9 @@ styles: |-
 card_layout: large-2-rows
 ```
 #### Popup Card
-![run](images/run_zh.png)
+<!-- ![run](images/run_zh.png) -->
+<img src="images/run_zh.png" alt="run" width="300"/>
+
 ```yaml
 type: vertical-stack
 cards:
@@ -143,7 +149,9 @@ cards:
       - switch.tokit_cooker_tk4001_auto_keep_warm
       - switch.tokit_cooker_tk4001_running
 ```
-![schedule](images/schedule_zh.png)
+<!-- ![schedule](images/schedule_zh.png) -->
+<img src="images/schedule_zh.png" alt="schedule" width="300"/>
+
 ```yaml
 type: vertical-stack
 cards:
@@ -159,7 +167,9 @@ cards:
       - switch.tokit_cooker_tk4001_reservation
 
 ```
-![menu](images/menu_zh.png)
+<!-- ![menu](images/menu_zh.png) -->
+<img src="images/menu_zh.png" alt="menu" width="300"/>
+
 ```yaml
 type: vertical-stack
 cards:

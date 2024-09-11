@@ -34,17 +34,22 @@ Configuration variables:
 - **name** (*Optional*): The name of your cooker.
 - **model** (*Optional*): The insterval in seconds to scan your cooker
 
-![configure](images/configure.png)
+<!-- ![configure](images/configure.png) -->
+<img src="images/configure.png" alt="configure" width="200"/>
+
 
 > Select location
 
-![configure_location](images/configure_location.png)
+<!-- ![configure_location](images/configure_location.png) -->
+<img src="images/configure_location.png" alt="configure_location" width="200"/>
 
 ### Dashboard
 Install [Bubble Cards](https://github.com/Clooos/Bubble-Card)
 
 #### Bubble Card 
-![bubble_card](images/bubble_card.png)
+<!-- ![bubble_card](images/bubble_card.png) -->
+<img src="images/bubble_card.png" alt="bubble_card" width="400"/>
+
 ```yaml
 type: custom:bubble-card
 card_type: button
@@ -131,7 +136,9 @@ styles: |-
 card_layout: large-2-rows
 ```
 #### Popup Card
-![run](images/run.png)
+<!-- ![run](images/run.png) -->
+<img src="images/run.png" alt="run" width="300"/>
+
 ```yaml
 type: vertical-stack
 cards:
@@ -145,7 +152,9 @@ cards:
       - switch.tokit_cooker_tk4001_auto_keep_warm
       - switch.tokit_cooker_tk4001_running
 ```
-![schedule](images/schedule.png)
+<!-- ![schedule](images/schedule.png) -->
+<img src="images/schedule.png" alt="schedule" width="300"/>
+
 ```yaml
 type: vertical-stack
 cards:
@@ -161,7 +170,9 @@ cards:
       - switch.tokit_cooker_tk4001_reservation
 
 ```
-![menu](images/menu.png)
+<!-- ![menu](images/menu.png) -->
+<img src="images/menu.png" alt="menu" width="300"/>
+
 ```yaml
 type: vertical-stack
 cards:
