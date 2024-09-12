@@ -1,4 +1,6 @@
 {
+  "domain": "tokit_cooker",
+  "name": "TOKIT Smart Rice Cooker",
   "codeowners": [
     "@oooohhoo"
   ],
@@ -6,12 +8,11 @@
   "dependencies": [
   ],
   "documentation": "https://github.com/oooohhoo/tokit_cooker",
-  "domain": "tokit_cooker",
+  
   "iot_class": "local_polling",
   "issue_tracker": "https://github.com/oooohhoo/tokit_cooker/issues",
-  "name": "TOKIT Smart Rice Cooker",
   "requirements": [
-    "python-miio@git+https://github.com/oooohhoo/python-miio.git",
+    "python-miio@git+https://github.com/oooohhoo/python-miio.git@master",
     "crcmod"
   ],
   "version": "1.0.0"
