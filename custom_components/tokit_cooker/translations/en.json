@@ -1,160 +1,170 @@
 {
-    "options":{
-        "step":{
-            "init":{
-                "title": "Config device info.",
-                "data": {
-                    "name": "Device name",
-                    "scan_interval": "Update state interval (seconds)"
-                }
-            }
-        }
+  "config": {
+    "abort": {
+      "already_configured": "Device is already configured"
     },
-    "config": {
-        "flow_title": "Tokit Cooker",
-        "abort": {
-            "already_configured": "Device is already configured"
+    "flow_title": "Tokit Cooker",
+    "step": {
+      "user": {
+        "data": {
+          "host": "Local IP",
+          "name": "Device name",
+          "scan_interval": "Update state interval (seconds)",
+          "token": "Token"
         },
-        "step":{
-            "user":{
-                "title": "Config device info.",
-                "data": {
-                    "host": "Local IP",
-                    "token": "Token",
-                    "name": "Device name",
-                    "scan_interval": "Update state interval (seconds)"
-                }
-            }
-        }
-    },
-    "entity": {
-        "sensor": {
-            "temperature": {
-                "name": "Temperature"
-            },
-            "menu":{
-                "name": "Menu"
-            },
-            "status":{
-                "name": "Status",
-                "state":{
-                    "idle": "IDLE",
-                    "running": "RUNNING",
-                    "keepwarm": "KEEPWARM",
-                    "reservation": "RESERVATION",
-                    "unusual": "UNUSUAL",
-                    "finish": "FINISH"
-                }
-            },
-            "remaining":{
-                "name": "Remaining"
-            },
-            "duration": {
-                "name": "Duration"
-            },
-            "schedule_time":{
-                "name":"Schedule Time"
-            },
-            "start_time":{
-                "name": "Start Time"
-            },
-            "finish_time":{
-                "name": "Finish Time"
-            }
-        },
-        "select": {
-            "menu":{
-                "name": "Menu"
-            },
-            "menu_options":{
-                "name": "Menu Options"
-            }
-        },
-        "binary_sensor":{
-            "auto_keep_warm":{
-                "name": "Auto Keep Warm"
-            }
-        },
-        "time":{
-            "schedule_time":{
-                "name":"Schedule Time"
-            },
-            "duration":{
-                "name":"Duration"
-            }
-        },
-        "switch":{
-            "auto_keep_warm":{
-                "name": "Auto Keep Warm"
-            },
-            "reservation":{
-                "name": "Reservation"
-            },
-            "running":{
-                "name": "Running"
-            }
-        },
-        "button":{
-            "set_menu": {
-                "name": "Set Menu"
-            },
-            "del_menu": {
-                "name": "Delete Menu"
-            }
-        }
-    },
-    "services": {
-      "cooker_stop": {
-        "name": "Stop cooking",
-        "description": "Stop the cooking process."
-      },
-      "cooker_start": {
-        "name": "Start cooking",
-        "description": "Start the cooking process.",
-        "fields":{
-            "name": {
-                "name": "Menu"
-            },
-            "duration": {
-                "name": "Duration"
-            },
-            "auto_keep_warm":{
-                "name": "Auto Keep Warm"
-            },
-            "schedule_time":{
-                "name":"Schedule Time"
-            }
-        }
-      },
-      "cooker_set_menu": {
-        "name": "Set Menu",
-        "description": "Set the cooker menu.",
-        "fields":{
-            "index": {
-                "name": "Index"
-            },
-            "name": {
-                "name": "Menu"
-            },
-            "duration": {
-                "name": "Duration"
-            },
-            "auto_keep_warm":{
-                "name": "Auto Keep Warm"
-            },
-            "schedule_time":{
-                "name":"Schedule Time"
-            }
-        }
-      },
-      "cooker_del_menu": {
-        "name": "Delete Menu",
-        "description": "Delete the cooker menu.",
-        "fields":{
-            "index": {
-                "name": "Index"
-            }
-        }
+        "title": "Config device info."
       }
     }
+  },
+  "entity": {
+    "binary_sensor": {
+      "auto_keep_warm": {
+        "name": "Auto Keep Warm"
+      }
+    },
+    "button": {
+      "del_menu": {
+        "name": "Delete Menu"
+      },
+      "set_menu": {
+        "name": "Set Menu"
+      }
+    },
+    "select": {
+      "menu": {
+        "name": "Menu"
+      },
+      "menu_options": {
+        "name": "Menu Options"
+      }
+    },
+    "sensor": {
+      "duration": {
+        "name": "Duration"
+      },
+      "finish_time": {
+        "name": "Finish Time"
+      },
+      "menu": {
+        "name": "Menu"
+      },
+      "remaining": {
+        "name": "Remaining"
+      },
+      "schedule_time": {
+        "name": "Schedule Time"
+      },
+      "start_time": {
+        "name": "Start Time"
+      },
+      "status": {
+        "name": "Status",
+        "state": {
+          "finish": "FINISH",
+          "idle": "IDLE",
+          "keepwarm": "KEEPWARM",
+          "reservation": "RESERVATION",
+          "running": "RUNNING",
+          "unusual": "UNUSUAL"
+        }
+      },
+      "temperature": {
+        "name": "Temperature"
+      }
+    },
+    "switch": {
+      "auto_keep_warm": {
+        "name": "Auto Keep Warm"
+      },
+      "reservation": {
+        "name": "Reservation"
+      },
+      "running": {
+        "name": "Running"
+      }
+    },
+    "time": {
+      "duration": {
+        "name": "Duration"
+      },
+      "schedule_time": {
+        "name": "Schedule Time"
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "name": "Device name",
+          "scan_interval": "Update state interval (seconds)"
+        },
+        "title": "Config device info."
+      }
+    }
+  },
+  "services": {
+    "cooker_del_menu": {
+      "description": "Delete the cooker menu.",
+      "fields": {
+        "index": {
+          "description": "The index of menu on cooker dashboard.",
+          "name": "Index"
+        }
+      },
+      "name": "Delete Menu"
+    },
+    "cooker_set_menu": {
+      "description": "Set the cooker menu.",
+      "fields": {
+        "auto_keep_warm": {
+          "description": "keep warm after cooking.",
+          "name": "Auto Keep Warm"
+        },
+        "duration": {
+          "description": "The cooking time.",
+          "name": "Duration"
+        },
+        "index": {
+          "description": "The index of menu on cooker dashboard.",
+          "name": "Index"
+        },
+        "name": {
+          "description": "All available menus of the cooker.",
+          "name": "Menu"
+        },
+        "schedule_time": {
+          "description": "The scheduled time for cooking.",
+          "name": "Scheduled Time"
+        }
+      },
+      "name": "Set Menu"
+    },
+    "cooker_start": {
+      "description": "Start the cooking process.",
+      "fields": {
+        "auto_keep_warm": {
+          "description": "Keep warm after cooking.",
+          "name": "Auto Keep Warm"
+        },
+        "duration": {
+          "description": "The cooking time.",
+          "name": "Duration"
+        },
+        "name": {
+          "description": "All available menus of the cooker.",
+          "name": "Menu"
+        },
+        "schedule_time": {
+          "description": "The scheduled time for cooking.",
+          "name": "Scheduled Time"
+        }
+      },
+      "name": "Start cooking"
+    },
+    "cooker_stop": {
+      "description": "Stop the cooking process.",
+      "name": "Stop cooking"
+    }
+  }
 }

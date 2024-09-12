@@ -35,3 +35,13 @@ repos:
           - --pretty
           - --show-error-codes
           - --show-error-context
+  - repo: https://github.com/tillig/json-sort-cli
+    rev: v1.0.0 # Use a version tag or SHA commit hash
+    hooks:
+      - id: json-sort
+        args:
+          - --autofix
+  - repo: https://github.com/google/yamlfmt
+    rev: v0.10.0
+    hooks:
+      - id: yamlfmt

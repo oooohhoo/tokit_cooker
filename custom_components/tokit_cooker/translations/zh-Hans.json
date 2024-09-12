@@ -1,166 +1,176 @@
 {
-    "options":{
-        "step":{
-            "init":{
-                "title": "配置设备",
-                "data": {
-                    "name": "设备名称",
-                    "scan_interval": "状态更新间隔（秒）"
-                }
-            }
-        }
+  "config": {
+    "abort": {
+      "already_configured": "设备已经配置"
     },
-    "config": {
-        "flow_title": "Tokit电饭煲",
-        "abort": {
-            "already_configured": "设备已经配置"
+    "flow_title": "Tokit电饭煲",
+    "step": {
+      "user": {
+        "data": {
+          "host": "本地IP地址",
+          "name": "设备名称",
+          "scan_interval": "状态更新间隔（秒）",
+          "token": "Token"
         },
-        "step":{
-            "user":{
-                "title": "配置设备",
-                "data": {
-                    "host": "本地IP地址",
-                    "token": "Token",
-                    "name": "设备名称",
-                    "scan_interval": "状态更新间隔（秒）"
-                }
-            }
-        }
-    },
-    "entity": {
-        "sensor": {
-            "temperature": {
-                "name": "温度"
-            },
-            "menu":{
-                "name": "菜单"
-            },
-            "status":{
-                "name": "状态",
-                "state":{
-                    "idle": "空闲",
-                    "running": "运行",
-                    "keepwarm": "保温",
-                    "reservation": "预约",
-                    "unusual": "异常",
-                    "finish": "完成"
-                }
-            },
-            "remaining":{
-                "name": "剩余时间"
-            },
-            "duration": {
-                "name": "耗时"
-            },
-            "auto_keep_warm":{
-                "name": "自动保温"
-            },
-            "schedule_time":{
-                "name":"预约时间"
-            },
-            "start_time":{
-                "name": "开始时间"
-            },
-            "finish_time":{
-                "name": "结束时间"
-            }
-        },
-        "select": {
-            "menu":{
-                "name": "菜单"
-            },
-            "menu_options":{
-                "name": "菜单可选项"
-            }
-        },
-        "binary_sensor":{
-            "auto_keep_warm":{
-                "name": "自动保温"
-            }
-        },
-        "time":{
-            "schedule_time":{
-                "name":"预约时间"
-            },
-            "duration":{
-                "name":"耗时"
-            }
-        },
-        "switch":{
-            "auto_keep_warm":{
-                "name": "自动保温"
-            },
-            "status":{
-                "name": "运行状态"
-            },
-            "reservation":{
-                "name": "预约"
-            },
-            "running":{
-                "name": "运行"
-            }
-        },
-        "button":{
-            "set_menu": {
-                "name": "设置菜单"
-            },
-            "del_menu": {
-                "name": "删除菜单"
-            }
-        }
-    },
-    "services": {
-      "cooker_stop": {
-        "name": "停止烹饪",
-        "description": "停止烹饪、保温、预约。"
-      },
-      "cooker_start": {
-        "name": "开始烹饪",
-        "description": "开始烹饪、保温、预约.",
-        "fields":{
-            "name": {
-                "name": "菜单"
-            },
-            "duration": {
-                "name": "耗时"
-            },
-            "auto_keep_warm":{
-                "name": "自动保温"
-            },
-            "schedule_time":{
-                "name":"预约时间"
-            }
-        }
-      },
-      "cooker_set_menu": {
-        "name": "设置菜单",
-        "description": "设置菜单。",
-        "fields":{
-            "index": {
-                "name": "序号"
-            },
-            "name": {
-                "name": "菜单"
-            },
-            "duration": {
-                "name": "耗时"
-            },
-            "auto_keep_warm":{
-                "name": "自动保温"
-            },
-            "schedule_time":{
-                "name": "预约时间"
-            }
-        }
-      },
-      "cooker_del_menu": {
-        "name": "删除菜单",
-        "description": "删除菜单。",
-        "fields":{
-            "index": {
-                "name": "序号"
-        }
+        "title": "配置设备"
       }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "auto_keep_warm": {
+        "name": "自动保温"
+      }
+    },
+    "button": {
+      "del_menu": {
+        "name": "删除菜单"
+      },
+      "set_menu": {
+        "name": "设置菜单"
+      }
+    },
+    "select": {
+      "menu": {
+        "name": "菜单"
+      },
+      "menu_options": {
+        "name": "菜单可选项"
+      }
+    },
+    "sensor": {
+      "auto_keep_warm": {
+        "name": "自动保温"
+      },
+      "duration": {
+        "name": "耗时"
+      },
+      "finish_time": {
+        "name": "结束时间"
+      },
+      "menu": {
+        "name": "菜单"
+      },
+      "remaining": {
+        "name": "剩余时间"
+      },
+      "schedule_time": {
+        "name": "预约时间"
+      },
+      "start_time": {
+        "name": "开始时间"
+      },
+      "status": {
+        "name": "状态",
+        "state": {
+          "finish": "完成",
+          "idle": "空闲",
+          "keepwarm": "保温",
+          "reservation": "预约",
+          "running": "运行",
+          "unusual": "异常"
+        }
+      },
+      "temperature": {
+        "name": "温度"
+      }
+    },
+    "switch": {
+      "auto_keep_warm": {
+        "name": "自动保温"
+      },
+      "reservation": {
+        "name": "预约"
+      },
+      "running": {
+        "name": "运行"
+      },
+      "status": {
+        "name": "运行状态"
+      }
+    },
+    "time": {
+      "duration": {
+        "name": "耗时"
+      },
+      "schedule_time": {
+        "name": "预约时间"
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "name": "设备名称",
+          "scan_interval": "状态更新间隔（秒）"
+        },
+        "title": "配置设备"
+      }
+    }
+  },
+  "services": {
+    "cooker_del_menu": {
+      "description": "删除菜单。",
+      "fields": {
+        "index": {
+          "description": "电饭煲仪表盘上的序号。",
+          "name": "序号"
+        }
+      },
+      "name": "删除菜单"
+    },
+    "cooker_set_menu": {
+      "description": "设置菜单。",
+      "fields": {
+        "auto_keep_warm": {
+          "description": "完成后是否保温。",
+          "name": "自动保温"
+        },
+        "duration": {
+          "description": "烹饪时间。",
+          "name": "耗时"
+        },
+        "index": {
+          "description": "电饭煲仪表盘上的序号。",
+          "name": "序号"
+        },
+        "name": {
+          "description": "电饭煲支持的全部烹饪模式。",
+          "name": "菜单"
+        },
+        "schedule_time": {
+          "description": "预约完成的时间。",
+          "name": "预约时间"
+        }
+      },
+      "name": "设置菜单"
+    },
+    "cooker_start": {
+      "description": "开始烹饪、保温、预约。",
+      "fields": {
+        "auto_keep_warm": {
+          "description": "烹饪完成后是否保温。",
+          "name": "自动保温"
+        },
+        "duration": {
+          "description": "烹饪时间。",
+          "name": "耗时"
+        },
+        "name": {
+          "description": "电饭煲支持的全部烹饪模式。",
+          "name": "菜单"
+        },
+        "schedule_time": {
+          "description": "预约完成的时间。",
+          "name": "预约时间"
+        }
+      },
+      "name": "开始烹饪"
+    },
+    "cooker_stop": {
+      "description": "停止烹饪、保温、预约。",
+      "name": "停止烹饪"
     }
   }
 }
